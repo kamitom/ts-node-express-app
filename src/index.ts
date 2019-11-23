@@ -1,6 +1,5 @@
 
 import express from 'express';
-// import path from 'path';
 import faker from 'faker';
 
 type addFn = (x: number, y: number) => void;
@@ -21,7 +20,7 @@ app.get('/', (req: any, res) => {
 
   req.name = faker.name.findName();
 
-  res.send(`hello, ${req.name}`)
+  res.send(`hello, ${req.name}, for docker !!`)
 })
 
 app.listen(port, () => {
