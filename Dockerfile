@@ -1,5 +1,8 @@
 FROM node:latest
 
+LABEL AUTHOR = "TOM" \
+      EMAIL = "TOM@TEST.ME"
+
 COPY src/index.js package.json /app/
 
 WORKDIR /app
