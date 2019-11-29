@@ -12,7 +12,8 @@ var app = express_1.default();
 var port = 8080;
 app.get('/', function (req, res) {
     req.name = faker_1.default.name.findName();
-    res.send("hello, " + req.name + ", for docker !!");
+    var testHtml = "<H1>\n  hello test: " + req.name + ", for Docker!!\n  </H1>";
+    res.send(testHtml);
 });
 app.listen(port, function () {
     console.log("server start at http://localhost:" + port);
