@@ -20,9 +20,15 @@ app.get('/', (req: any, res) => {
 
   req.name = faker.name.findName();
 
+  const testInterface = { a: faker.random.number({ min: 5, max: 20 }), b: 200} 
+  const testaddFunc = add(testInterface)
+
   let testHtml = `<H1>
   hello test: ${req.name}, for Docker!!
-  </H1>`
+  </H1>
+  <hr>
+  <H2>addFunc answer is ${testaddFunc}</H2>
+  `
 
   res.send(testHtml)
 })
