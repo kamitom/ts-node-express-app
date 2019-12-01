@@ -9,4 +9,6 @@ WORKDIR /app
 
 RUN npm install && npm cache clean --force
 
+EXPOSE 8634/tcp
+
 CMD node index.js

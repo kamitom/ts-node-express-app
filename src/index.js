@@ -9,7 +9,7 @@ var add = function (x) {
     return x.a + x.b;
 };
 var app = express_1.default();
-var port = 8080;
+var port = 8634;
 app.get('/', function (req, res) {
     req.name = faker_1.default.name.findName();
     var testInterface = { a: faker_1.default.random.number({ min: 5, max: 20 }), b: 200 };
